@@ -1,12 +1,12 @@
 /**
- * Colors
- */
-/**
  * SCSS Variables.
  *
  * Please use variables from this sheet to ensure consistency across the UI.
  * Don't add to this sheet unless you're pretty sure the value will be reused in many places.
  * For example, don't add rules to this sheet that affect block visuals. It's purely for UI.
+ */
+/**
+ * Colors
  */
 /**
  * Fonts & basic variables.
@@ -43,23 +43,9 @@
  * React Native specific.
  * These variables do not appear to be used anywhere else.
  */
-.wp-block-navigation .wp-block-navigation-item__label {
-  overflow-wrap: break-word;
-}
-.wp-block-navigation .wp-block-navigation-item__description {
-  display: none;
-}
-
-.link-ui-tools {
-  outline: 1px solid #f0f0f0;
-  padding: 8px;
-}
-
-.link-ui-block-inserter {
-  padding-top: 8px;
-}
-
-.link-ui-block-inserter__back {
-  margin-right: 8px;
-  text-transform: uppercase;
+.wp-block-post-author__transform {
+  background: #f0f0f0;
+  border-radius: 2px;
+  margin: 16px;
+  padding: 16px;
 }
