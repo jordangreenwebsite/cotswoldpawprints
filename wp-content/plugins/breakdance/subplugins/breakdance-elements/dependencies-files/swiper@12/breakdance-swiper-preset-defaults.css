@@ -3,6 +3,8 @@
   --swiper-pagination-color: #2563eb;
   --swiper-theme-color: #2563eb;
   --swiper-padding-h: 42px;
+  --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.25);
+  --swiper-navigation-sides-offset: 12px;
 
   position: relative;
   padding: 0 var(--swiper-padding-h);
@@ -10,7 +12,6 @@
 }
 
 .swiper {
-  overflow: hidden;
   width: 100%;
 }
 
@@ -18,14 +19,6 @@
 .swiper-button-next > svg {
   stroke-width: 0;
   stroke: currentColor;
-  fill: currentColor;
-  width: 100%;
-}
-
-.swiper-button-disabled {
-  opacity: 0.35;
-  cursor: auto;
-  pointer-events: none;
 }
 
 .swiper-button-prev,
@@ -40,53 +33,23 @@
   justify-content: center;
 }
 
-.swiper-button-prev {
-  left: 12px;
-}
-
-.swiper-button-next {
-  right: 12px;
-}
-
-/* Fixes a bug with Swiper adding bullets inside pagination when re-updating for some reason */
-.swiper-button-prev .swiper-pagination-bullet {
-  display: none;
-}
-
 .swiper-pagination {
   margin-top: 8px;
   position: initial;
 }
 
-.swiper-pagination,
 .swiper-pagination-bullet {
-  color: #2563eb;
-}
-
-.swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover {
-  transition: opacity 0.2s ease-in;
-  opacity: 0.4;
-}
-
-.swiper-pagination-bullet {
-  background-color: #2563eb;
-  margin: 0 4px !important;
-  border-radius: 100%;
   bottom: initial;
 }
 
-.breakdance-swiper-wrapper .swiper-pagination-progressbar {
-  background: rgba(0, 0, 0, 0.25);
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover {
+  opacity: 0.4;
+  transition: opacity 0.2s ease-in;
+}
 
+.breakdance-swiper-wrapper .swiper-pagination-progressbar {
   /* Make sure to update the values in the preset CSS if these change*/
   /* make the progressbar match the slider's width when made smaller by the outside arrows */
   width: calc(100% - (var(--swiper-padding-h) * 2));
   left: var(--swiper-padding-h);
-}
-
-/* #8770 */
-@media (prefers-reduced-motion: reduce) {
-  .breakdance-swiper-wrapper .swiper-wrapper {
-    transition: none !important;
-  }
 }
